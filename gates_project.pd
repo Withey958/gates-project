@@ -1,0 +1,20 @@
+#N canvas -6 43 822 551 10;
+#X msg 37 10 devices;
+#X obj 40 45 comport 1 9600;
+#X obj 37 112 unpack f f;
+#X floatatom 26 153 5 0 0 0 - - -;
+#X floatatom 92 153 5 0 0 0 - - -;
+#X text 226 40 Use control E to leave editing mode you can then press
+'devices' and the log window will show devices. Arduino will come up
+as usbmodem try connecting to this by changing the 1 in comport.,
+f 38;
+#X obj 90 274 ctlout 1;
+#X obj 14 196 ctlout 2;
+#X obj 45 71 repack;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 3 0 7 0;
+#X connect 4 0 6 0;
+#X connect 8 0 2 0;
